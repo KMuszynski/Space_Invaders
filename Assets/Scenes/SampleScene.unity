@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 7742266}
   - component: {fileID: 7742265}
   m_Layer: 0
-  m_Name: niebo
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -186,7 +186,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 13.5, y: 6.29}
+  m_Size: {x: 17.132614, y: 6.29}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -200,8 +200,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7742264}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0071, y: -0.0373, z: 0}
-  m_LocalScale: {x: 2.502511, y: 2.0947638, z: 1}
+  m_LocalPosition: {x: 0.0118, y: -0.01, z: 0}
+  m_LocalScale: {x: 2.5297365, y: 2.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -284,7 +284,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -302,7 +302,7 @@ GameObject:
   - component: {fileID: 787161962}
   - component: {fileID: 787161961}
   m_Layer: 0
-  m_Name: Enemy Menager
+  m_Name: Enemy Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -438,7 +438,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1543997273}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.53, y: 7.75, z: 0}
+  m_LocalPosition: {x: -6.83, y: -0.15, z: 0}
   m_LocalScale: {x: 6.44, y: 6.78, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -27,12 +27,13 @@ public class SpawnManager : MonoBehaviour
             Debug.Log("2 wave");
             wave1end = false;
         }
-        if (Enemy2Script.bombDropped == true && i == 0)
+        // This code does that there spawns a lot of enemies - it needs to be corrected
+     /*   if (Enemy2Script.bombDropped == true && i == 0)
         {
             Enemy2Script.bombDropped = false;
             Instantiate(enemy1Creator);
             wave1end = false;
             i++;
-        }
+        }*/
     }
 }
