@@ -30,7 +30,7 @@ public class ProjectileScript : MonoBehaviour
             return;
         }
         Destroy(gameObject);
-        Destroy(other.gameObject);
+        //Destroy(other.gameObject);
         Enemy1Controller.numberOfEnemies--;
     }
 }

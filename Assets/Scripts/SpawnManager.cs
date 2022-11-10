@@ -24,16 +24,14 @@ public class SpawnManager : MonoBehaviour
         if (wave1end == true)
         {
             Instantiate(enemy2Creator);  //Creates a bomb-dropping baloon
-            Debug.Log("2 wave");
+            //Debug.Log("2 wave");
             wave1end = false;
         }
-        // This code does that there spawns a lot of enemies - it needs to be corrected
-     /*   if (Enemy2Script.bombDropped == true && i == 0)
+        if (Enemy2Script.bombDropped == true)
         {
+            Debug.Log("AAA");
             Enemy2Script.bombDropped = false;
             Instantiate(enemy1Creator);
-            wave1end = false;
-            i++;
-        }*/
+        }
     }
 }
