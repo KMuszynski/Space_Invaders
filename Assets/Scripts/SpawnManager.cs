@@ -9,7 +9,7 @@ public class SpawnManager : MonoBehaviour
     bool if1 = false;
     public GameObject enemy2Creator;
     public static bool wave2end = false;
-    public static int i=0;
+   // public static int i=0;
 
     // Start is called before the first frame update
     void Start()

@@ -21,7 +21,12 @@ public class bombScript : MonoBehaviour
         if (transform.position.y < -6f )
         {
             Destroy(gameObject);
+            Enemy2Script.bombDropped = true;
         }
+    /*    if (czas > 3)
+        {
+            Destroy(gameObject);
+        } */
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -30,6 +35,7 @@ public class bombScript : MonoBehaviour
             Destroy(gameObject);
             // Destroy(other.gameObject);
             Debug.Log("trafiony");
+            Enemy2Script.bombDropped = true;
         }
     }
 }
