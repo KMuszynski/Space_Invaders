@@ -26,9 +26,9 @@ public class EnemyScript : MonoBehaviour
     private void EnemyMovement()
     {
         transform.Translate(Vector3.up * Time.deltaTime * speed);
-        if (transform.position.y > 4.5f)
+        if (transform.position.y > 3.5f)
         {
-            transform.position = new Vector3(transform.position.x, 4.499f, transform.position.z);
+            transform.position = new Vector3(transform.position.x, 3.499f, transform.position.z);
             speed = speed * (-1);
         }
         if (transform.position.y < -4.5f)
