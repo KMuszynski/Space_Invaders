@@ -43,7 +43,7 @@ public class Enemy2Script : MonoBehaviour
         }
         if (timeSinceBomb > 3)
         {
-           // Destroy(gameObject);
+            Destroy(gameObject);
             bombDropped = true;
             //SpawnManager.i = 0;
         }
