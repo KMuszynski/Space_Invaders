@@ -51,6 +51,7 @@ public class Enemy1Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log("NoE:" + numberOfEnemies + " Total: " + totalNumberOfEnemiesCreated);
         //counting time
         timeRemaining -= Time.deltaTime;
         time1 += Time.deltaTime;

@@ -14,12 +14,15 @@ public class Enemy2Script : MonoBehaviour
     public static bool bombDropped = false;
     float timeSinceBomb = 0;
     float health = 5;
+    public static bool delete = false;
 
     // Start is called before the first frame update
     void Start()
     {
         timeSinceBomb = 0;
         bombDropped = false;
+        bombDropped1=false;
+        delete = false;
     }
 
     // Update is called once per frame
@@ -31,15 +34,18 @@ public class Enemy2Script : MonoBehaviour
         {
             Instantiate(bombPrefab, new Vector3(transform.position.x, transform.position.y, 0), bombPrefab.transform.rotation);
             bombDropped1 = true;
+           // Destroy(Enemy2Creator);
+           delete = true;
             if1 = true;
         }
-        if (transform.position.x < -12)
+        if (transform.position.x < -12 || transform.position.y>6)
         {
             Destroy(gameObject);
         }
         if (bombDropped1 == true)
         {
             timeSinceBomb += Time.deltaTime;
+            transform.Translate(Vector3.up * Time.deltaTime * speed * 1.2f );
         }
         if (timeSinceBomb > 3)
         {
@@ -55,6 +61,7 @@ public class Enemy2Script : MonoBehaviour
         {
             Destroy(gameObject);
             bombDropped = true;
+            delete = true;
         }
         else
         {

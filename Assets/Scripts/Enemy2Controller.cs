@@ -16,6 +16,9 @@ public class Enemy2Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (Enemy2Script.delete == true)
+        {
+            Destroy(gameObject);
+        }
     }
 }

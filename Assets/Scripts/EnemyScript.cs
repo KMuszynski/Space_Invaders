@@ -57,8 +57,11 @@ public class EnemyScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Destroy(gameObject);
-        //Destroy(other.gameObject);
+        if (other.CompareTag("Player") || other.CompareTag("Projectile"))
+        {
+            Destroy(gameObject);
+            Enemy1Controller.numberOfEnemies--;
+        }
     }
 
 }
