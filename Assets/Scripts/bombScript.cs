@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class bombScript : MonoBehaviour
 {
-    private float speed = 5f;
+    public float speed = 5f;
     float czas = 0;
 
     // Start is called before the first frame update

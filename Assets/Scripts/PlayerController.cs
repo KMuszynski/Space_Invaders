@@ -6,13 +6,16 @@ using System;
 
 public class PlayerController : MonoBehaviour
 {
-    public float horizontalInput;
-    public float verticalInput;
+    private float horizontalInput;
+    private float verticalInput;
     public float speed = 10.0f;
     private float timeRemaining = 0.0f;
     public GameObject projectilePrefab;
     public static float playerPositionX;
+    public static float playerPositionY;
+    public int playerHealth = 10;
     // Start is called before the first frame update
+
     void Start()
     {
         transform.position = new Vector3(-8f,0,0);
@@ -51,6 +54,7 @@ public class PlayerController : MonoBehaviour
         }
 
         playerPositionX = transform.position.x;
+        playerPositionY = transform.position.y;
     }
     private void OnTriggerEnter2D(Collider2D other)
     {

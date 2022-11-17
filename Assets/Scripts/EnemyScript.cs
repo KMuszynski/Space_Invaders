@@ -8,7 +8,7 @@ using UnityEngine.UIElements;
 public class EnemyScript : MonoBehaviour
 {
 
-    private float speed = 2.5f;
+    public float speed = 2.5f;
 
 
     // Start is called before the first frame update

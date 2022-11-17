@@ -124,6 +124,7 @@ MonoBehaviour:
   verticalInput: 0
   speed: 10
   projectilePrefab: {fileID: 5910762687930996227, guid: f8b24f1506dafee4396225246216d128, type: 3}
+  test: 0
 --- !u!70 &6383063734871340427
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

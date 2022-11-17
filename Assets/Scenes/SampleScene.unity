@@ -298,6 +298,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 697991555808974560, guid: b6a4b2c1ccf261440b7a9c7b062fa9b2, type: 3}
+      propertyPath: Aborygen
+      value: 
+      objectReference: {fileID: 1785194061736591259, guid: e82790d00df6f824087c9e2478c443f8, type: 3}
     - target: {fileID: 697991555808974561, guid: b6a4b2c1ccf261440b7a9c7b062fa9b2, type: 3}
       propertyPath: m_Name
       value: Enemy Manager

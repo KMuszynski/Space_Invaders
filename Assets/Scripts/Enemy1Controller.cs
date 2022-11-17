@@ -20,7 +20,7 @@ public class Enemy1Controller : MonoBehaviour
         System.Random rd = new System.Random();
         int rand_x = rd.Next(0, 10);
         int rand_y = rd.Next(-4, 3);
-        List<int> integers = new List<int>();
+       // List<int> integers = new List<int>();
 
         if (position.Contains(rand_x) || position.Contains(rand_x + 1) || position.Contains(rand_x - 1) || position.Contains(rand_x + 2) || position.Contains(rand_x - 2))
         {
