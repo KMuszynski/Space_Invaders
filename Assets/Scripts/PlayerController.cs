@@ -13,16 +13,20 @@ public class PlayerController : MonoBehaviour
     public GameObject projectilePrefab;
     public static float playerPositionX;
     public static float playerPositionY;
-    public int playerHealth = 10;
+    public int playerHealth = 5;
+    public static float timeFromStart = 0f;
     // Start is called before the first frame update
 
     void Start()
     {
-        transform.position = new Vector3(-8f,0,0);
+        transform.position = new Vector3(-8f, 0, 0);
+        gameObject.SetActive(true);
+        gameObject.layer = LayerMask.NameToLayer("Layer2");
     }
     // Update is called once per frame
     void Update()
     {
+        timeFromStart += Time.deltaTime;
         timeRemaining -= Time.deltaTime;
         // Ruch gracza
         horizontalInput = Input.GetAxis("Horizontal");
@@ -46,7 +50,7 @@ public class PlayerController : MonoBehaviour
         }
         if (transform.position.y < -4.5f)
         {
-            transform.position = new Vector3(transform.position.x , -4.499f, transform.position.z);
+            transform.position = new Vector3(transform.position.x, -4.499f, transform.position.z);
         }
         else if (transform.position.y > 4.5f)
         {
@@ -58,9 +62,30 @@ public class PlayerController : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Enemy"))
+        if (other.CompareTag("Enemy")||other.CompareTag("Sterowiec") || other.CompareTag("Arrow") || other.CompareTag("Aborygen"))
         {
-            Debug.Log("MURZYN");
-        }
+            playerHealth--;
+            if(playerHealth<1)
+            {
+                Destroy(gameObject);
+            }
+            else
+            {
+                transform.position = new Vector3(-8f, 0, 0);
+
+                gameObject.layer = LayerMask.NameToLayer("Deafult");
+                StartCoroutine(Wait());
+                gameObject.layer = LayerMask.NameToLayer("Layer2");
+                StartCoroutine(Wait());
+                gameObject.layer = LayerMask.NameToLayer("Deafult");
+                StartCoroutine(Wait());
+                gameObject.layer = LayerMask.NameToLayer("Layer2");
+            }
+        } 
+    }
+
+    IEnumerator Wait()
+    {
+            yield return new WaitForSeconds(0.5f);
     }
 }

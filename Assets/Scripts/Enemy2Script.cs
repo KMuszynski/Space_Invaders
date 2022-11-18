@@ -23,6 +23,7 @@ public class Enemy2Script : MonoBehaviour
         bombDropped = false;
         bombDropped1=false;
         delete = false;
+        gameObject.layer = LayerMask.NameToLayer("Layer2");
     }
 
     // Update is called once per frame

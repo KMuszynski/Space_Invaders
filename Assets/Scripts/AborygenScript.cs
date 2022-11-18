@@ -14,6 +14,7 @@ public class AborygenScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gameObject.layer = LayerMask.NameToLayer("Layer2");
         arrowShot = false;
         ArrowFinished = false;
 
@@ -36,7 +37,7 @@ public class AborygenScript : MonoBehaviour
         {
             transform.Translate(Vector3.up * Time.deltaTime * speed * (-1));
         }
-        if(PlayerController.playerPositionY < (transform.position.y + 0.1) && PlayerController.playerPositionY > (transform.position.y - 0.1))
+        if(PlayerController.playerPositionY < (transform.position.y + 0.1) && PlayerController.playerPositionY > (transform.position.y - 0.1)&&arrowShot==false)
         {
             Instantiate(arrowPrefab, new Vector3(transform.position.x, transform.position.y, 0), arrowPrefab.transform.rotation);
             arrowShot = true;

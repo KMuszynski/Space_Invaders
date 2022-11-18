@@ -12,6 +12,7 @@ public class ArrowScript : MonoBehaviour
     void Start()
     {
         aborygenEnd = false;
+        gameObject.layer = LayerMask.NameToLayer("Layer2");
     }
 
     // Update is called once per frame
@@ -36,6 +37,7 @@ public class ArrowScript : MonoBehaviour
         }
         Destroy(gameObject);
         aborygenEnd = true;
-      //  AborygenScript.ArrowFinished = true;
+        //  AborygenScript.ArrowFinished = true;
+        Debug.Log("AAAAAAAAAAAAAAAAAAAA");
     }
 }

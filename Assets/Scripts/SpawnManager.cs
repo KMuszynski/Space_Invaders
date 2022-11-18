@@ -8,7 +8,6 @@ public class SpawnManager : MonoBehaviour
     public GameObject enemy1Creator;
     public GameObject Aborygen;
     public static bool wave1end = false;
-    bool if1 = false;
     public GameObject enemy2Creator;
     public static bool wave2end = false;
     // public static int i=0;
