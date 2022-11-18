@@ -62,7 +62,7 @@ public class PlayerController : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Enemy")||other.CompareTag("Sterowiec") || other.CompareTag("Arrow") || other.CompareTag("Aborygen"))
+        if (other.CompareTag("Enemy")||other.CompareTag("Sterowiec") || other.CompareTag("Arrow") || other.CompareTag("Aborygen") || other.CompareTag("Bomb"))
         {
             playerHealth--;
             if(playerHealth<1)
