@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public float speed = 10.0f;
     private float timeRemaining = 0.0f;
     public GameObject projectilePrefab;
+    public GameObject gameOverPrefab;
     public static float playerPositionX;
     public static float playerPositionY;
     public int playerHealth = 5;
@@ -68,6 +69,7 @@ public class PlayerController : MonoBehaviour
             if(playerHealth<1)
             {
                 Destroy(gameObject);
+                Instantiate(gameOverPrefab,new Vector3(0f, 0, 0), gameOverPrefab.transform.rotation);
             }
             else
             {
