@@ -9,7 +9,7 @@ public class ProjectileScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        gameObject.layer = LayerMask.NameToLayer("Layer2");
     }
 
     // Update is called once per frame

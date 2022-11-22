@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 public class SpawnManager : MonoBehaviour
 {
     public GameObject enemy1Creator;
+    public GameObject Aborygen;
     public static bool wave1end = false;
-    bool if1 = false;
     public GameObject enemy2Creator;
     public static bool wave2end = false;
     // public static int i=0;
@@ -37,8 +37,14 @@ public class SpawnManager : MonoBehaviour
         }
         if (Enemy2Script.bombDropped == true)
         {
-            Debug.Log("AAA");
+            Instantiate(Aborygen);
             Enemy2Script.bombDropped = false;
+
+        }
+        if (ArrowScript.aborygenEnd == true)
+        {
+           // Debug.Log("AAA");
+            ArrowScript.aborygenEnd = false;
             Instantiate(enemy1Creator);
             numberOfWavesTotal++;
         }

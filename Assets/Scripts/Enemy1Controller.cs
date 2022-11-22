@@ -20,11 +20,11 @@ public class Enemy1Controller : MonoBehaviour
         System.Random rd = new System.Random();
         int rand_x = rd.Next(0, 10);
         int rand_y = rd.Next(-4, 3);
-        List<int> integers = new List<int>();
+       // List<int> integers = new List<int>();
 
         if (position.Contains(rand_x) || position.Contains(rand_x + 1) || position.Contains(rand_x - 1) || position.Contains(rand_x + 2) || position.Contains(rand_x - 2))
         {
-            Debug.Log("did not create enemy");
+            //Debug.Log("did not create enemy");
             return 0;
         }
         else
@@ -33,7 +33,7 @@ public class Enemy1Controller : MonoBehaviour
             position.Add(rand_x);
             numberOfEnemies++;
             totalNumberOfEnemiesCreated++;
-            Debug.Log("created enemy");
+            //Debug.Log("created enemy");
             return 1;
         }
     }
@@ -51,7 +51,7 @@ public class Enemy1Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("NoE:" + numberOfEnemies + " Total: " + totalNumberOfEnemiesCreated);
+        //Debug.Log("NoE:" + numberOfEnemies + " Total: " + totalNumberOfEnemiesCreated);
         //counting time
         timeRemaining -= Time.deltaTime;
         time1 += Time.deltaTime;
@@ -70,7 +70,7 @@ public class Enemy1Controller : MonoBehaviour
         {
             Destroy(gameObject);
             SpawnManager.wave1end = true;
-            Debug.Log("Destroy");
+            //Debug.Log("Destroy");
         }
     }
 }

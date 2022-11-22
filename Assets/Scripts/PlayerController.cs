@@ -6,20 +6,28 @@ using System;
 
 public class PlayerController : MonoBehaviour
 {
-    public float horizontalInput;
-    public float verticalInput;
+    private float horizontalInput;
+    private float verticalInput;
     public float speed = 10.0f;
     private float timeRemaining = 0.0f;
     public GameObject projectilePrefab;
+    public GameObject gameOverPrefab;
     public static float playerPositionX;
+    public static float playerPositionY;
+    public int playerHealth = 5;
+    public static float timeFromStart = 0f;
     // Start is called before the first frame update
+
     void Start()
     {
-        transform.position = new Vector3(-8f,0,0);
+        transform.position = new Vector3(-8f, 0, 0);
+        gameObject.SetActive(true);
+        gameObject.layer = LayerMask.NameToLayer("Layer2");
     }
     // Update is called once per frame
     void Update()
     {
+        timeFromStart += Time.deltaTime;
         timeRemaining -= Time.deltaTime;
         // Ruch gracza
         horizontalInput = Input.GetAxis("Horizontal");
@@ -43,7 +51,7 @@ public class PlayerController : MonoBehaviour
         }
         if (transform.position.y < -4.5f)
         {
-            transform.position = new Vector3(transform.position.x , -4.499f, transform.position.z);
+            transform.position = new Vector3(transform.position.x, -4.499f, transform.position.z);
         }
         else if (transform.position.y > 4.5f)
         {
@@ -51,12 +59,35 @@ public class PlayerController : MonoBehaviour
         }
 
         playerPositionX = transform.position.x;
+        playerPositionY = transform.position.y;
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Enemy"))
+        if (other.CompareTag("Enemy")||other.CompareTag("Sterowiec") || other.CompareTag("Arrow") || other.CompareTag("Aborygen") || other.CompareTag("Bomb"))
         {
-            Debug.Log("MURZYN");
-        }
+            playerHealth--;
+            if(playerHealth<1)
+            {
+                Destroy(gameObject);
+                Instantiate(gameOverPrefab,new Vector3(0f, 0, 0), gameOverPrefab.transform.rotation);
+            }
+            else
+            {
+                transform.position = new Vector3(-8f, 0, 0);
+
+                gameObject.layer = LayerMask.NameToLayer("Deafult");
+                StartCoroutine(Wait());
+                gameObject.layer = LayerMask.NameToLayer("Layer2");
+                StartCoroutine(Wait());
+                gameObject.layer = LayerMask.NameToLayer("Deafult");
+                StartCoroutine(Wait());
+                gameObject.layer = LayerMask.NameToLayer("Layer2");
+            }
+        } 
+    }
+
+    IEnumerator Wait()
+    {
+            yield return new WaitForSeconds(0.5f);
     }
 }
