@@ -11,7 +11,7 @@ public class bombScript : MonoBehaviour
     void Start()
     {
         czas = 0;
-        gameObject.layer = LayerMask.NameToLayer("Layer2");
+        //gameObject.layer = LayerMask.NameToLayer("Layer2");
     }
 
     // Update is called once per frame
