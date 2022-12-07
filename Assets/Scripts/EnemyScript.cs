@@ -9,14 +9,19 @@ public class EnemyScript : MonoBehaviour
 {
 
     public float speed = 2.5f;
-
+    public GameObject EnemyProjectile;
 
     // Start is called before the first frame update
     void Start()
     {
         speed = speed * RandomValue();
+        InvokeRepeating("ShootPlayer", 2.0f, 2.0f);
     }
 
+    void ShootPlayer()
+    {
+        Instantiate(EnemyProjectile, transform.position, transform.rotation);
+    }
     // Update is called once per frame
     void Update()
     {

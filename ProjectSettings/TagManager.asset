@@ -9,6 +9,8 @@ TagManager:
   - Sterowiec
   - Aborygen
   - Arrow
+  - Bomb
+  - EnemyProjectile
   layers:
   - Default
   - TransparentFX
