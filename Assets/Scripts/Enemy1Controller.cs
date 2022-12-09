@@ -9,9 +9,11 @@ public class Enemy1Controller : MonoBehaviour
     private float timeRemaining = 0f;
     public static float time1 = 0f;
     public GameObject enemyPrefab;
-    int enemyCreatedSuccesfully = 0;
-    int totalNumberOfEnemiesCreated = 0;
-
+    public GameObject tank;
+    private float xSpawnPos = 12.0f;
+    private float yRandSpawnPos;
+    private int enemyCreatedSuccesfully = 0;
+    private int totalNumberOfEnemiesCreated = 0;
     // float enemyRadius = 3f;
     List<int> position = new List<int>();
 
@@ -55,6 +57,13 @@ public class Enemy1Controller : MonoBehaviour
         //counting time
         timeRemaining -= Time.deltaTime;
         time1 += Time.deltaTime;
+        
+        // Creating tank if it doesn't exist
+        if (GameObject.Find("Tank(Clone)") == null)
+        {
+            yRandSpawnPos = Random.Range(-4.5f, 4.5f);
+            Instantiate(tank, new Vector2(xSpawnPos, yRandSpawnPos), tank.transform.rotation);
+        }
 
         //creating enemies
         if (time1 > 1.75f && numberOfEnemies < 3 && totalNumberOfEnemiesCreated < 3)

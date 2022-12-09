@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 7742269}
   m_Layer: 0
   m_Name: Background
-  m_TagString: Untagged
+  m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -363,7 +363,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: aa844b9eab0ed2c479e49df7aa09a754, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.29
+  m_Volume: 0.413
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -817,9 +817,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6383063734871340427, guid: f266f39bcbde690438872fb3462aa35d, type: 3}
+      propertyPath: m_Size.x
+      value: 0.546397
+      objectReference: {fileID: 0}
+    - target: {fileID: 6383063734871340427, guid: f266f39bcbde690438872fb3462aa35d, type: 3}
+      propertyPath: m_Size.y
+      value: 0.2511598
+      objectReference: {fileID: 0}
+    - target: {fileID: 6383063734871340427, guid: f266f39bcbde690438872fb3462aa35d, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.005238823
+      objectReference: {fileID: 0}
+    - target: {fileID: 6383063734871340427, guid: f266f39bcbde690438872fb3462aa35d, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.026907539
+      objectReference: {fileID: 0}
     - target: {fileID: 6383063734871340428, guid: f266f39bcbde690438872fb3462aa35d, type: 3}
       propertyPath: m_Name
       value: Ship
+      objectReference: {fileID: 0}
+    - target: {fileID: 6383063734871340428, guid: f266f39bcbde690438872fb3462aa35d, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6383063734871340430, guid: f266f39bcbde690438872fb3462aa35d, type: 3}
       propertyPath: m_SortingLayer

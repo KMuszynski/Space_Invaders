@@ -7,13 +7,13 @@ public class Enemy2Script : MonoBehaviour
 
 
     public float speed = 15f;
-    float sterowiecPositionX;
+    private float sterowiecPositionX;
     private bool if1 = false;
     public GameObject bombPrefab;
     public static bool bombDropped1 = false;
     public static bool bombDropped = false;
-    float timeSinceBomb = 0;
-    float health = 5;
+    private float timeSinceBomb = 0;
+    private float health = 5;
     public static bool delete = false;
 
     // Start is called before the first frame update

@@ -25,11 +25,15 @@ public class ProjectileScript : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (time < 0.02f)
+       
+      /* if (time < 0.02f)
         {
             return;
+        } commmented by Lukasz*/
+        if ((!other.CompareTag("Player")) && (!other.CompareTag("Background")))
+        {
+            Destroy(gameObject);
         }
-        Destroy(gameObject);
         //Destroy(other.gameObject);
         //Enemy1Controller.numberOfEnemies--;
     }

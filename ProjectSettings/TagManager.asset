@@ -11,6 +11,9 @@ TagManager:
   - Arrow
   - Bomb
   - EnemyProjectile
+  - EnemyTank
+  - PlayerShip
+  - Background
   layers:
   - Default
   - TransparentFX
