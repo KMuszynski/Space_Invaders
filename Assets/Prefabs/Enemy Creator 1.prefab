@@ -46,3 +46,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 6122023719091758557, guid: 0613ef320943f954291729f93f138c40, type: 3}
   tank: {fileID: 4533297223040626067, guid: 5514f7fef7044c6439460e2ab4f04899, type: 3}
+  fuel: {fileID: 268409592840745204, guid: 3c449193ffb6fd548966ca7a812b7a9c, type: 3}
