@@ -30,7 +30,7 @@ public class ProjectileScript : MonoBehaviour
         {
             return;
         } commmented by Lukasz*/
-        if ((!other.CompareTag("Player")) && (!other.CompareTag("Background")))
+        if ((!other.CompareTag("Player")) && (!other.CompareTag("Background")) && (!other.CompareTag("Fuel")))
         {
             Destroy(gameObject);
         }
