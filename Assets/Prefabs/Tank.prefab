@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 4533297223040626063}
   - component: {fileID: 4533297223040626064}
   - component: {fileID: -731469990892160009}
-  - component: {fileID: 5205045100402830041}
   - component: {fileID: 2477951539575545036}
+  - component: {fileID: -2595292094096475585}
   m_Layer: 0
   m_Name: Tank
   m_TagString: EnemyTank
@@ -127,22 +127,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   diagonalProjectile: {fileID: 4816989147506720805, guid: 15ac9447ab166df4caf0a0abca84bae7, type: 3}
---- !u!70 &5205045100402830041
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4533297223040626067}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.05353738, y: 0.026304629}
-  m_Size: {x: 0.7005755, y: 0.4541489}
-  m_Direction: 1
 --- !u!114 &2477951539575545036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,3 +140,55 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealth: 10
+--- !u!60 &-2595292094096475585
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4533297223040626067}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.64, y: 0.64}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.2473911, y: 0.20267786}
+      - {x: 0.23192278, y: 0.19436212}
+      - {x: 0.21870878, y: 0.18371606}
+      - {x: 0.15393391, y: 0.15671277}
+      - {x: 0.11826686, y: 0.13240777}
+      - {x: 0.06592609, y: 0.14286514}
+      - {x: -0.12547663, y: 0.14590657}
+      - {x: -0.2269907, y: 0.10938026}
+      - {x: -0.3034229, y: 0.02648591}
+      - {x: -0.26688725, y: -0.024573136}
+      - {x: -0.08389377, y: -0.136637}
+      - {x: -0.048963353, y: -0.13891281}
+      - {x: -0.008221245, y: -0.12585714}
+      - {x: 0.011911772, y: -0.0936663}
+      - {x: 0.11228045, y: -0.09807825}
+      - {x: 0.17955264, y: -0.13079548}
+      - {x: 0.2513788, y: -0.15557918}
+      - {x: 0.3065952, y: -0.15325351}
+      - {x: 0.2933669, y: -0.14520374}
+      - {x: 0.32209244, y: -0.14292687}
+      - {x: 0.32472762, y: -0.04834658}
+      - {x: 0.27557027, y: 0.011209853}
+      - {x: 0.32041112, y: 0.011984364}
+      - {x: 0.32139853, y: 0.033926312}
+      - {x: 0.27315158, y: 0.04863553}
+      - {x: 0.318495, y: 0.08702381}
+      - {x: 0.321923, y: 0.20205349}
