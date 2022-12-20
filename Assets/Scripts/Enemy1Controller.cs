@@ -10,7 +10,6 @@ public class Enemy1Controller : MonoBehaviour
     public static float time1 = 0f;
     public GameObject enemyPrefab;
     public GameObject tank;
-    public GameObject fuel;
     private float xSpawnPos = 12.0f;
     private float yRandSpawnPos;
     private int enemyCreatedSuccesfully = 0;
@@ -66,11 +65,6 @@ public class Enemy1Controller : MonoBehaviour
             Instantiate(tank, new Vector2(xSpawnPos, yRandSpawnPos), tank.transform.rotation);
         }
 
-        if (GameObject.Find("Fuel(Clone)") == null)
-        {
-            yRandSpawnPos = Random.Range(-4.5f, 4.5f);
-            Instantiate(fuel, new Vector2(xSpawnPos, yRandSpawnPos), fuel.transform.rotation);
-        }
         //creating enemies
         if (time1 > 1.75f && numberOfEnemies < 3 && totalNumberOfEnemiesCreated < 3)
         {
