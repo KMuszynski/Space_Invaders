@@ -18,11 +18,6 @@ public class Kamikaze : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector3.right * Time.deltaTime * speed * (-1));
-        if (transform.position.x < -12)
-        {
-            Destroy(gameObject);
-            KeepOnTargetEnd = true;
-        }
         time += Time.deltaTime;
     }
 
@@ -32,7 +27,6 @@ public class Kamikaze : MonoBehaviour
         {
             return;
         }
-        Destroy(gameObject);
         KeepOnTargetEnd = true;
         //  KeepOnTargetScript.ArrowFinished = true;
     }
