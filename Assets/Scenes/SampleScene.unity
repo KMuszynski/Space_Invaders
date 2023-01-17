@@ -208,7 +208,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7742267
 MonoBehaviour:
@@ -456,7 +456,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1933732511691983301, guid: e267ba87345e9144f9990a29faf82fa4, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1933732511691983301, guid: e267ba87345e9144f9990a29faf82fa4, type: 3}
       propertyPath: m_LocalScale.x
@@ -693,6 +693,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 697991555808974560, guid: b6a4b2c1ccf261440b7a9c7b062fa9b2, type: 3}
+      propertyPath: Barrel
+      value: 
+      objectReference: {fileID: 6119054141178868853, guid: fe4c4f11e5456c74598fa2d8d82e21b2, type: 3}
+    - target: {fileID: 697991555808974560, guid: b6a4b2c1ccf261440b7a9c7b062fa9b2, type: 3}
       propertyPath: Aborygen
       value: 
       objectReference: {fileID: 1785194061736591259, guid: e82790d00df6f824087c9e2478c443f8, type: 3}
@@ -706,7 +710,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 697991555808974563, guid: b6a4b2c1ccf261440b7a9c7b062fa9b2, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 697991555808974563, guid: b6a4b2c1ccf261440b7a9c7b062fa9b2, type: 3}
       propertyPath: m_LocalPosition.x

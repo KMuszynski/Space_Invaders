@@ -6,10 +6,11 @@ using UnityEngine.SceneManagement;
 public class SpawnManager : MonoBehaviour
 {
     public GameObject enemy1Creator;
-    public GameObject Aborygen;
+    public GameObject Barrel;
     public static bool wave1end = false;
     public GameObject enemy2Creator;
     public static bool wave2end = false;
+    public static bool barrelDestroyed = false;
     // public static int i=0;
     public static int numberOfWavesTotal = 0;
 
@@ -30,23 +31,28 @@ public class SpawnManager : MonoBehaviour
         } */
         if (wave1end == true)
         {
+            wave1end = false;
             Instantiate(enemy2Creator);  //Creates a bomb-dropping baloon
             //Debug.Log("2 wave");
-            wave1end = false;
             numberOfWavesTotal++;
         }
         if (Enemy2Script.bombDropped == true)
         {
-            Instantiate(Aborygen);
             Enemy2Script.bombDropped = false;
-
+            Instantiate(Barrel);
         }
+        if (barrelDestroyed == true)
+        {
+            barrelDestroyed = false;
+            Instantiate(enemy1Creator);
+        }
+        /*
         if (ArrowScript.aborygenEnd == true)
         {
            // Debug.Log("AAA");
-            ArrowScript.aborygenEnd = false;
+            ArrowScript.barrelEnd = false;
             Instantiate(enemy1Creator);
             numberOfWavesTotal++;
-        }
+        }*/
     }
 }

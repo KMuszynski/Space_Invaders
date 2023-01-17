@@ -14,6 +14,8 @@ TagManager:
   - EnemyTank
   - PlayerShip
   - Background
+  - Fuel
+  - Barrel
   layers:
   - Default
   - TransparentFX
