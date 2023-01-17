@@ -33,7 +33,7 @@ public class bombScript : MonoBehaviour
     {
      //   if (czas>=0.3)
       //  {
-        if (other.CompareTag("Projectile"))
+        if (other.CompareTag("Projectile") || other.CompareTag("Player"))
         {
             Destroy(gameObject);
             // Destroy(other.gameObject);
