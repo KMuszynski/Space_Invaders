@@ -31,12 +31,16 @@ public class bombScript : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (czas>=0.3)
+     //   if (czas>=0.3)
+      //  {
+        if (other.CompareTag("Projectile"))
         {
             Destroy(gameObject);
             // Destroy(other.gameObject);
             Debug.Log("trafiony");
             Enemy2Script.bombDropped = true;
         }
+           
+     //   }
     }
 }
