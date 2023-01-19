@@ -5,7 +5,7 @@ using UnityEngine;
 public class DestroyOnTag : MonoBehaviour
 {
     // Start is called before the first frame update
-    public string otherTag;
+    public string[] otherTags;
     void Start()
     {
         
@@ -18,9 +18,12 @@ public class DestroyOnTag : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag(otherTag))
+        for(int i = 0; i < otherTags.Length; i++)
         {
-            Destroy(gameObject);
+            if (other.CompareTag(otherTags[i]))
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }

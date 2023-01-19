@@ -19,11 +19,7 @@ public class HeartSystem : MonoBehaviour
  
     public void TakeDamage(int damageTaken)
     {
-        if(currentHealth < damageTaken)
-        {
-            //dead
-        }
-        else
+        if(currentHealth > damageTaken)
         {
             for (int i = currentHealth - 1; i > currentHealth - 1 - damageTaken; i--)
             {
@@ -31,7 +27,5 @@ public class HeartSystem : MonoBehaviour
                 hearts[i].SetActive(false);
             }
         }
-        
-        
     }
 }

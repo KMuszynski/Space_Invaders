@@ -769,6 +769,10 @@ PrefabInstance:
       propertyPath: gameOverPrefab
       value: 
       objectReference: {fileID: 2603764635953354933, guid: e0622b3ba63afb2488a450040aed0103, type: 3}
+    - target: {fileID: 6383063734871340424, guid: f266f39bcbde690438872fb3462aa35d, type: 3}
+      propertyPath: immortalityTime
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6383063734871340425, guid: f266f39bcbde690438872fb3462aa35d, type: 3}
       propertyPath: m_RootOrder
       value: 1

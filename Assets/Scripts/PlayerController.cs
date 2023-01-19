@@ -6,9 +6,11 @@ using System;
 
 public class PlayerController : MonoBehaviour
 {
+    public bool playerVulnerable = true;
     private float horizontalInput;
     private float verticalInput;
     public float speed = 10.0f;
+    public float immortalityTime = 2;
     private float timeRemaining = 0.0f;
     public GameObject projectilePrefab;
     public GameObject gameOverPrefab;
@@ -66,7 +68,7 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
        
-        if (other.CompareTag("Enemy")||other.CompareTag("Sterowiec") || other.CompareTag("Arrow") || other.CompareTag("Aborygen") || other.CompareTag("Bomb") || other.CompareTag("EnemyProjectile") || other.CompareTag("EnemyTank") || other.CompareTag("Barrel"))
+        if (playerVulnerable && (other.CompareTag("Enemy")||other.CompareTag("Sterowiec") || other.CompareTag("Arrow") || other.CompareTag("Aborygen") || other.CompareTag("Bomb") || other.CompareTag("EnemyProjectile") || other.CompareTag("EnemyTank") || other.CompareTag("Barrel")))
         {
             
             heartSystem.TakeDamage(1);
@@ -79,7 +81,6 @@ public class PlayerController : MonoBehaviour
             else
             {
                 transform.position = new Vector3(-8f, 0, 0);
-
                 /*gameObject.layer = LayerMask.NameToLayer("Deafult");
                 StartCoroutine(Wait());
                 gameObject.layer = LayerMask.NameToLayer("Layer2");
@@ -88,7 +89,16 @@ public class PlayerController : MonoBehaviour
                 StartCoroutine(Wait());
                 gameObject.layer = LayerMask.NameToLayer("Layer2");*/
             }
+            StartCoroutine(Immortality());
         } 
+    }
+    IEnumerator Immortality()
+    {
+        playerVulnerable = false;
+        Debug.Log("player not vulnerable");
+        yield return new WaitForSecondsRealtime(immortalityTime);
+        playerVulnerable = true;
+
     }
 
     IEnumerator Wait()
