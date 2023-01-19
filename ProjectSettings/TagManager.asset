@@ -16,6 +16,7 @@ TagManager:
   - Background
   - Fuel
   - Barrel
+  - Rocketship
   layers:
   - Default
   - TransparentFX

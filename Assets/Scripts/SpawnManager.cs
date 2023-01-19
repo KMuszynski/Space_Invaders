@@ -6,11 +6,14 @@ using UnityEngine.SceneManagement;
 public class SpawnManager : MonoBehaviour
 {
     public GameObject enemy1Creator;
+    public GameObject rocketship;
     public GameObject Barrel;
     public static bool wave1end = false;
     public GameObject enemy2Creator;
     public static bool wave2end = false;
     public static bool barrelDestroyed = false;
+    private float yRandSpawnPos;
+    public float xSpawnPos = 12;
     // public static int i=0;
     public static int numberOfWavesTotal = 0;
 
@@ -25,10 +28,15 @@ public class SpawnManager : MonoBehaviour
     // Update is called once per frame
     void Update()   
     {
-      /*  if (numberOfWavesTotal >= 3)
+        /*  if (numberOfWavesTotal >= 3)
+          {
+              SceneManager.LoadScene(sceneName: "2 Scene");
+          } */
+        if (GameObject.Find("Rocketship(Clone)") == null)
         {
-            SceneManager.LoadScene(sceneName: "2 Scene");
-        } */
+            yRandSpawnPos = Random.Range(-3.5f, 3.5f);
+            Instantiate(rocketship, new Vector2(xSpawnPos, yRandSpawnPos), rocketship.transform.rotation);
+        }
         if (wave1end == true)
         {
             wave1end = false;

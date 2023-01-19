@@ -203,7 +203,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7742264}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.8457, y: -0.04, z: 0}
+  m_LocalPosition: {x: 10.8457, y: -0.065, z: 0}
   m_LocalScale: {x: 2.4196, y: 2.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -700,6 +700,14 @@ PrefabInstance:
       propertyPath: Aborygen
       value: 
       objectReference: {fileID: 1785194061736591259, guid: e82790d00df6f824087c9e2478c443f8, type: 3}
+    - target: {fileID: 697991555808974560, guid: b6a4b2c1ccf261440b7a9c7b062fa9b2, type: 3}
+      propertyPath: xSpawnPos
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 697991555808974560, guid: b6a4b2c1ccf261440b7a9c7b062fa9b2, type: 3}
+      propertyPath: rocketship
+      value: 
+      objectReference: {fileID: 8636745402589659261, guid: 52f1846fdd1662a4ab04727677db49fb, type: 3}
     - target: {fileID: 697991555808974561, guid: b6a4b2c1ccf261440b7a9c7b062fa9b2, type: 3}
       propertyPath: m_Name
       value: Enemy Manager
