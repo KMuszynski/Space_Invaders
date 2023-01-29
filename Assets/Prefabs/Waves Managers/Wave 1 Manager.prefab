@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &697991555808974561
+--- !u!1 &3404436666160998283
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,44 +8,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 697991555808974563}
-  - component: {fileID: 697991555808974560}
+  - component: {fileID: 3574420960742595274}
+  - component: {fileID: 5708912237989154305}
   m_Layer: 0
-  m_Name: Enemy Manager
+  m_Name: Wave 1 Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &697991555808974563
+--- !u!4 &3574420960742595274
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 697991555808974561}
+  m_GameObject: {fileID: 3404436666160998283}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 1}
+  m_LocalPosition: {x: 0.6543142, y: 0.2037167, z: -0.13758159}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &697991555808974560
+--- !u!114 &5708912237989154305
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 697991555808974561}
-  m_Enabled: 1
+  m_GameObject: {fileID: 3404436666160998283}
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f2ac70b18b13944db6725e27c05d18a, type: 3}
+  m_Script: {fileID: 11500000, guid: 709d4a3f6659e9f4f88e7c442cbf401d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy1Creator: {fileID: 4343749818577939376, guid: 2dc8a11ab001f6241b6f80917247c681, type: 3}
-  rocketship: {fileID: 8636745402589659261, guid: 52f1846fdd1662a4ab04727677db49fb, type: 3}
-  Barrel: {fileID: 6119054141178868853, guid: fe4c4f11e5456c74598fa2d8d82e21b2, type: 3}
-  enemy2Creator: {fileID: 995414179110331629, guid: 8a74b411c14c31b40b810dd1198f654e, type: 3}
-  xSpawnPos: 12
