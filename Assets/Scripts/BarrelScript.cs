@@ -5,12 +5,14 @@ using UnityEngine;
 public class BarrelScript : MonoBehaviour
 {
     private TrackPlayerHorizontally trackPlayerScript;
+    private SetPositionFromLeft setPosScript;
     private MoveLeft moveLeftScript;
     public float trackingTime = 2;
     // Start is called before the first frame update
     void Start()
     {
         trackPlayerScript = GetComponent<TrackPlayerHorizontally>();
+        setPosScript = GetComponent<SetPositionFromLeft>();
         moveLeftScript = GetComponent<MoveLeft>();
         StartCoroutine(PlayerTracking());
     }
@@ -27,8 +29,8 @@ public class BarrelScript : MonoBehaviour
     IEnumerator PlayerTracking()
     {
         moveLeftScript.enabled = false;
-        moveLeftScript.enabled = false;
-        yield return new WaitUntil(() => SetPositionFromLeft.destinationReached == true);
+        trackPlayerScript.enabled = false;
+        yield return new WaitUntil(() => setPosScript.destinationReached == true);
         Debug.Log("Started player-tracking");
         trackPlayerScript.enabled = true;
         yield return new WaitForSecondsRealtime(trackingTime);

@@ -17,6 +17,7 @@ TagManager:
   - Fuel
   - Barrel
   - Rocketship
+  - BasicEnemy
   layers:
   - Default
   - TransparentFX

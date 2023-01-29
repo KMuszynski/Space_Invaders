@@ -7,22 +7,22 @@ public class SetPositionFromLeft : MonoBehaviour
     // Start is called before the first frame update
     public Vector2 destination;
     public float travelTime = 2;
-    public static bool destinationReached = false;
+    public bool destinationReached = false;
     void Start()
     {
-        StartCoroutine(LerpPosition(destination, travelTime));
+        StartCoroutine(LerpPosition());
     }
-    IEnumerator LerpPosition(Vector2 targetPosition, float duration)
+    IEnumerator LerpPosition()
     {
         float time = 0;
         Vector2 startPosition = transform.position;
-        while (time < duration)
+        while (time < travelTime)
         {
-            transform.position = Vector2.Lerp(startPosition, targetPosition, time / duration);
+            transform.position = Vector2.Lerp(startPosition, destination, time / travelTime);
             time += Time.deltaTime;
             yield return null;
         }
-        transform.position = targetPosition;
+        transform.position = destination;
         destinationReached = true;
     }
 
