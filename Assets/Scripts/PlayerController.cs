@@ -45,21 +45,21 @@ public class PlayerController : MonoBehaviour
             Instantiate(projectilePrefab, transform.position + new Vector3(1.75f, 0, 0), projectilePrefab.transform.rotation);
         }
         //boundary's
-        if (transform.position.x < -10)
+        if (transform.position.x < -9.5f)
         {
-            transform.position = new Vector3(-9.9999f, transform.position.y, transform.position.z);
+            transform.position = new Vector3(-9.499999f, transform.position.y, transform.position.z);
         }
-        else if (transform.position.x > 10)
+        else if (transform.position.x > 9)
         {
-            transform.position = new Vector3(9.9999f, transform.position.y, transform.position.z);
+            transform.position = new Vector3(8.999999f, transform.position.y, transform.position.z);
         }
-        if (transform.position.y < -4.5f)
+        if (transform.position.y < -5)
         {
-            transform.position = new Vector3(transform.position.x, -4.499f, transform.position.z);
+            transform.position = new Vector3(transform.position.x, -4.9999999f, transform.position.z);
         }
-        else if (transform.position.y > 4.5f)
+        else if (transform.position.y > 5)
         {
-            transform.position = new Vector3(transform.position.x, 4.499f, transform.position.z);
+            transform.position = new Vector3(transform.position.x, 4.999999f, transform.position.z);
         }
 
         playerPositionX = transform.position.x;
