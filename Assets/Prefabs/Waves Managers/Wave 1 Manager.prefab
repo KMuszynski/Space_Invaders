@@ -39,8 +39,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3404436666160998283}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 709d4a3f6659e9f4f88e7c442cbf401d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  basicEnemy: {fileID: 170935322299905307, guid: 374376e9a27c2f94a9e378fc356f94e2, type: 3}
+  xSpawnPos: 11
+  yRandSpawnPos: 0
+  upperSpawnBound: 5
+  lowerSpawnBound: -5

@@ -7,8 +7,10 @@ public class BasicEnemyScript : MonoBehaviour
     private SetPositionFromLeft setPosScript;
     private MoveUpAndDown moveUpDownScript;
     private GameObject[] BasicEnemies;
-    public float xPlace;
+    private float xPlace;
+    public float distanceBetweenTwoenemies = 1;
     private bool notFoundXPos = true;
+    private bool settingPos = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,31 +21,41 @@ public class BasicEnemyScript : MonoBehaviour
     }
     IEnumerator EnemySetup()
     {
+        moveUpDownScript.enabled = false;
         setPosScript.enabled = false;
         BasicEnemies = GameObject.FindGameObjectsWithTag("BasicEnemy");
         do
         {
-            xPlace = Random.Range(-10f, 9f);
+            xPlace = Random.Range(-7f, 9f);
             for(int i = 0; i < BasicEnemies.Length; i++)
             {
                 if (BasicEnemies.Length == 1)
                 {
                     notFoundXPos = false;
                 }
-                else if (!(BasicEnemies[i].transform.position.x + 1 > xPlace && BasicEnemies[i].transform.position.x - 1 < xPlace) && !ReferenceEquals(gameObject, BasicEnemies[i]))
+                else if ((BasicEnemies[i].transform.position.x + distanceBetweenTwoenemies < xPlace || BasicEnemies[i].transform.position.x - distanceBetweenTwoenemies > xPlace) && !ReferenceEquals(gameObject, BasicEnemies[i]))
                 {
                     notFoundXPos = false;
                 }
             }
         }
         while (notFoundXPos);
-        setPosScript.destination = new Vector2(xPlace, 0);
+        setPosScript.destination = new Vector2(xPlace, transform.position.y);
         Debug.Log("Basic Enemy going to x = " + xPlace);
         setPosScript.travelTime = (12 - xPlace) / 5;
         setPosScript.enabled = true;
-        moveUpDownScript.enabled = false;
+        settingPos = true;
         yield return new WaitUntil(() => setPosScript.destinationReached == true);
+        settingPos = false;
+        Wave1Script.enemySet = true;
         moveUpDownScript.enabled = true;
+    }
+    private void OnDestroy()
+    {
+        if (settingPos)
+        {
+            Wave1Script.enemySet = true;
+        }
     }
     // Update is called once per frame
     void Update()

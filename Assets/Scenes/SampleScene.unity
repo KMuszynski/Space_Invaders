@@ -634,11 +634,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1684165095}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ccf67d3c07fe0d64faaf556a8e2755dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wave1Manager: {fileID: 3404436666160998283, guid: 3ba26b7ffdf120a4b8eaea5ca17eabbb, type: 3}
 --- !u!4 &1684165097
 Transform:
   m_ObjectHideFlags: 0
