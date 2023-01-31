@@ -31,10 +31,8 @@ public class BarrelScript : MonoBehaviour
         moveLeftScript.enabled = false;
         trackPlayerScript.enabled = false;
         yield return new WaitUntil(() => setPosScript.destinationReached == true);
-        Debug.Log("Started player-tracking");
         trackPlayerScript.enabled = true;
         yield return new WaitForSecondsRealtime(trackingTime);
-        Debug.Log("Ended player-tracking");
         trackPlayerScript.enabled = false;
         moveLeftScript.enabled = true;
     }

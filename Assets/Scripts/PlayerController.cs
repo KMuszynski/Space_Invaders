@@ -68,7 +68,7 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
        
-        if (playerVulnerable && (other.CompareTag("Rocketship") || other.CompareTag("Enemy")||other.CompareTag("Sterowiec") || other.CompareTag("Arrow") || other.CompareTag("Aborygen") || other.CompareTag("Bomb") || other.CompareTag("EnemyProjectile") || other.CompareTag("EnemyTank") || other.CompareTag("Barrel")))
+        if (playerVulnerable && (other.CompareTag("BasicEnemy") || other.CompareTag("Rocketship") || other.CompareTag("Enemy")||other.CompareTag("Sterowiec") || other.CompareTag("Arrow") || other.CompareTag("Aborygen") || other.CompareTag("Bomb") || other.CompareTag("EnemyProjectile") || other.CompareTag("EnemyTank") || other.CompareTag("Barrel")))
         {
             
             heartSystem.TakeDamage(1);
@@ -95,7 +95,6 @@ public class PlayerController : MonoBehaviour
     IEnumerator Immortality()
     {
         playerVulnerable = false;
-        Debug.Log("player not vulnerable");
         yield return new WaitForSecondsRealtime(immortalityTime);
         playerVulnerable = true;
 

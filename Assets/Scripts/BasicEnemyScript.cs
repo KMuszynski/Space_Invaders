@@ -8,13 +8,13 @@ public class BasicEnemyScript : MonoBehaviour
     private MoveUpAndDown moveUpDownScript;
     private GameObject[] BasicEnemies;
     private float xPlace;
-    public float distanceBetweenTwoenemies = 1;
+    public float distanceBetweenTwoEnemies = 1;
     private bool notFoundXPos = true;
     private bool settingPos = false;
+    private int counter = 0;
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(gameObject.name);
         setPosScript = GetComponent<SetPositionFromLeft>();
         moveUpDownScript = GetComponent<MoveUpAndDown>();
         StartCoroutine(EnemySetup());
@@ -24,20 +24,27 @@ public class BasicEnemyScript : MonoBehaviour
         moveUpDownScript.enabled = false;
         setPosScript.enabled = false;
         BasicEnemies = GameObject.FindGameObjectsWithTag("BasicEnemy");
+        counter = 0;
         do
         {
             xPlace = Random.Range(-7f, 9f);
-            for(int i = 0; i < BasicEnemies.Length; i++)
+            notFoundXPos = false;
+            for (int i = 0; i < BasicEnemies.Length; i++)
             {
-                if (BasicEnemies.Length == 1)
+    /*            if (BasicEnemies.Length == 1)
                 {
                     notFoundXPos = false;
+                }*/
+                if (((BasicEnemies[i].transform.position.x > 0 && xPlace < 0) || (BasicEnemies[i].transform.position.x < 0 && xPlace > 0)) && (Mathf.Abs(BasicEnemies[i].transform.position.x - xPlace) < distanceBetweenTwoEnemies) && !GameObject.ReferenceEquals(gameObject, BasicEnemies[i]))
+                {
+                    notFoundXPos = true;
                 }
-                else if ((BasicEnemies[i].transform.position.x + distanceBetweenTwoenemies < xPlace || BasicEnemies[i].transform.position.x - distanceBetweenTwoenemies > xPlace) && !ReferenceEquals(gameObject, BasicEnemies[i]))
+                else if (((BasicEnemies[i].transform.position.x > 0 && xPlace > 0) || (BasicEnemies[i].transform.position.x < 0 && xPlace < 0)) && (Mathf.Abs(Mathf.Abs(BasicEnemies[i].transform.position.x) - Mathf.Abs(xPlace)) < distanceBetweenTwoEnemies) && !GameObject.ReferenceEquals(gameObject, BasicEnemies[i]))
                 {
-                    notFoundXPos = false;
+                    notFoundXPos = true;
                 }
             }
+            counter += 1;
         }
         while (notFoundXPos);
         setPosScript.destination = new Vector2(xPlace, transform.position.y);

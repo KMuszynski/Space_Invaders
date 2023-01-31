@@ -5,6 +5,7 @@ using UnityEngine;
 public class Wave1Script : MonoBehaviour
 {
     public GameObject basicEnemy;
+    public GameObject tank;
     public static bool enemySet = false;
     public float xSpawnPos = 11;
     public float upperSpawnBound = 5;
@@ -21,11 +22,17 @@ public class Wave1Script : MonoBehaviour
             enemySet = false;
             yield return new WaitUntil(() => enemySet == true);
         }
+        yield return new WaitUntil(() => GameObject.Find("BasicEnemy(Clone)") == null);
+        Destroy(gameObject);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (GameObject.Find("Tank(Clone)") == null)
+        {
+            yRandSpawnPos = Random.Range(lowerSpawnBound, upperSpawnBound);
+            Instantiate(tank, new Vector2(xSpawnPos, yRandSpawnPos), tank.transform.rotation);
+        }
     }
 }
