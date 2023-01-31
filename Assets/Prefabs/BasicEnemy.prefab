@@ -184,7 +184,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   horizontalProjectile: {fileID: 4816989147506720805, guid: 15ac9447ab166df4caf0a0abca84bae7, type: 3}
-  shootDelay: 1
+  shootDelay: 1.5
   shootRepeat: 2
 --- !u!114 &170935322299905251
 MonoBehaviour:

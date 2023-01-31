@@ -155,6 +155,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 785a538475be829458e146873f029852, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  leftBound: -12
+  downBound: -7
+  upBound: 7
 --- !u!114 &8636745402589659239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,4 +199,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontalProjectile: {fileID: 5815889777868533556, guid: d29fb6c72152fca4e836082d95de8b26, type: 3}
   shootDelay: 0.5
-  shootRepeat: 1.5
+  shootRepeat: 2
